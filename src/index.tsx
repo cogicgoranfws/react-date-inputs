@@ -66,8 +66,8 @@ export const DateInputs: React.FC<DateInputsProps> = ({
     if (onChange && !isInitial) {
       if (day === undefined || month === undefined || year === undefined) {
         onChange(undefined);
-      } else if (isValid(day, month, year) && year.toString().length === 4) {
-        onChange(new Date(year, month - 1, day));
+      } else if (isValid(day as number, month as number, year as number) && year.toString().length === 4) {
+        onChange(new Date(year as number, month as number - 1, day as number));
       } else {
         onChange(undefined);
       }
@@ -75,7 +75,7 @@ export const DateInputs: React.FC<DateInputsProps> = ({
   }, [parsedValues]);
 
   const handleAutoFocus = ({ day, month, year }: DateUnits, unit: keyof typeof Unit) => {
-    const maxDays = month ? daysInMonth(month, year) : 31;
+    const maxDays = month ? daysInMonth(month as number, year as number) : 31;
 
     const currentIndex = show.indexOf(unit);
     const nextUnit = show[currentIndex + 1];

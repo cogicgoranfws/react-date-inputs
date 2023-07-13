@@ -23,7 +23,7 @@ export enum Unit {
 }
 
 export interface DateUnits {
-  [Unit.day]?: number;
-  [Unit.month]?: number;
-  [Unit.year]?: number;
+  [Unit.day]?: number | string;
+  [Unit.month]?: number | string;
+  [Unit.year]?: number | string;
 }

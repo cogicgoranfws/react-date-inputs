@@ -25,11 +25,11 @@ export function isValid(day: number, month: number, year: number): boolean {
 }
 
 export function getCappedUnits({ day, month, year }: DateUnits): DateUnits {
-  const maxDays = month ? daysInMonth(month, year) : 31;
+  const maxDays = month ? daysInMonth(month as number, year as number) : 31;
 
   return {
-    day: day && day > maxDays ? maxDays : day,
-    month: month && month > 12 ? 12 : month,
-    year: year && year > 9999 ? 9999 : year,
+    day: day && day as number > maxDays ? maxDays.toString().padStart(2, '0') : day?.toString().padStart(2, '0'),
+    month: month && month as number > 12 ? 12 : month?.toString().padStart(2, '0'),
+    year: year && year as number > 9999 ? 9999 : year,
   };
 }
