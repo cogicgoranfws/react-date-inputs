@@ -1,6 +1,6 @@
 {
   "name": "@goran.cogic.fws/react-date-inputs",
-  "version": "1.8.3",
+  "version": "1.8.4",
   "description": "Simple date inputs for React",
   "main": "dist/index.js",
   "scripts": {
