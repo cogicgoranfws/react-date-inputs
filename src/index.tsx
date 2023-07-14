@@ -93,14 +93,11 @@ export const DateInputs: React.FC<DateInputsProps> = ({
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>, unit: keyof typeof Unit) => {
     const parsedValue = parseInt(e.target.value, 10);
     const newUnitValue: number | string | undefined =  parsedValue >= 0 
-    ? unit === 'day' 
+    ? unit === 'day' || unit === 'month' 
     ? e.target.value
     : parsedValue 
     : undefined;
 
-    if(unit === 'day') {
-      value
-    }
     const newParsedValues: DateUnits = { ...parsedValues, [unit]: newUnitValue };
     const cappedValues: DateUnits = getCappedUnits(newParsedValues);
 
