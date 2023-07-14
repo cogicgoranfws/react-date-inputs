@@ -28,8 +28,8 @@ export function getCappedUnits({ day, month, year }: DateUnits): DateUnits {
   const maxDays = month ? daysInMonth(month as number, year as number) : 31;
 
   return {
-    day: day && day as number > maxDays ? maxDays.toString().padStart(2, '0') : day?.toString().padStart(2, '0'),
-    month: month && month as number > 12 ? 12 : month?.toString().padStart(2, '0'),
+    day: day && day as number > maxDays ? maxDays : day,
+    month: month && month as number > 12 ? 12 : month,
     year: year && year as number > 9999 ? 9999 : year,
   };
 }
