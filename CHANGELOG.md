@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.2](https://github.com/cogicgoranfws/react-date-inputs/compare/v1.8.1...v1.8.2) (2023-07-14)
+
 ### [1.8.1](https://github.com/cogicgoranfws/react-date-inputs/compare/v1.8.0...v1.8.1) (2023-07-13)
 
 ## 1.8.0 (2023-07-13)
